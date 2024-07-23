@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+input {
+    appearance: none;
+}
+
 :root {
     --secondary-text-color: #555555;
 }
@@ -17,14 +21,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 250px 1fr;
+    grid-template-rows: 200px 1fr;
     height: 100vh;
-}
-
-.header {
-    grid-column: 2 / 3;
-    padding: 50px;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 20%);
 }
 
 .sidebar {
@@ -165,4 +163,75 @@ h2 {
 .user-title {
     margin: 2px 0px;
     color: var(--secondary-text-color);
+}
+
+.header {
+    grid-column: 2 / 3;
+    padding: 20px 80px 20px 40px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 20%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header img {
+    height: 28px;
+}
+
+.hflex {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    background-color: #e2e8f0;
+    height: 2lh;
+    border-radius: 1lh;
+    border: 0;
+    padding: 0.5lh;
+    width: clamp(300px, 30vw, 700px);
+}
+
+.header > .hflex {
+    justify-content: space-between;
+}
+.user-corner > p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.user-greeting .user-avatar {
+    height: 80px;
+    width: 80px;
+}
+
+.user-corner,
+.buttons {
+    gap: 30px;
+}
+
+.search,
+.user-greeting {
+    gap: 20px;
+}
+
+.user-greeting p {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.user-greeting p:nth-of-type(2) {
+    font-size: 28px;
+}
+
+
+button {
+    background-color: #5f9eeb;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: 0;
+    height: 50px;
+    width: 120px;
+    border-radius: 25px;
 }
