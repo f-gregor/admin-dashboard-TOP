@@ -6,9 +6,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --secondary-text-color: #555555;
+}
+
 body {
     font-family: roboto;
 }
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -56,7 +61,7 @@ body {
 }
 
 .main {
-    background-color: #eeeeee;
+    background-color: #e2e8f0;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
@@ -69,7 +74,7 @@ body {
 .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 30px;
 }
 
 .card {
@@ -86,7 +91,7 @@ body {
 }
 
 .card > p {
-    color: #555555;
+    color: var(--secondary-text-color);
 }
 
 h2 {
@@ -104,4 +109,60 @@ h2 {
 
 .actions > img {
     filter: invert(8%) sepia(0%) saturate(12%) hue-rotate(214deg) brightness(99%) contrast(88%);
+}
+
+.side {
+    padding-right: 30px;
+}
+
+.announcements.card {
+    padding: 20px 40px;
+}
+
+.announcement {
+    padding: 20px 0px;
+    border-bottom: 2px solid #dddddd;
+}
+
+.announcement > p {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.announcement:last-child {
+    border-bottom: 0;
+}
+
+.trending {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    background-color: #5f9eeb;
+    width: 55px;
+    height: 55px;
+}
+
+.user h4 {
+    font-weight: 400;
+}
+
+.user-title {
+    margin: 2px 0px;
+    color: var(--secondary-text-color);
 }
